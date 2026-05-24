@@ -1,0 +1,125 @@
+/* ─────────────────────────────────────────────────────────────────────────────
+   ROLE SELECTION PAGE STYLES
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.role-selection-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+}
+
+.role-selection-page__container {
+  width: 100%;
+  max-width: 900px;
+}
+
+.role-selection-page__content {
+  text-align: center;
+}
+
+.role-selection-page__title {
+  margin: 0 0 0.5rem 0;
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.role-selection-page__subtitle {
+  margin: 0 0 3rem 0;
+  font-size: 1.25rem;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   ROLE CARDS
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.role-selection-page__cards {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.role-selection-page__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 2.5rem 2rem;
+  min-width: 280px;
+  border: 2px solid;
+  border-radius: 1rem;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.role-selection-page__card:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.role-selection-page__card--user:hover {
+  box-shadow: 0 12px 24px rgba(0, 201, 167, 0.2);
+}
+
+.role-selection-page__card--admin:hover {
+  box-shadow: 0 12px 24px rgba(139, 92, 246, 0.2);
+}
+
+.role-selection-page__icon {
+  font-size: 4rem;
+  line-height: 1;
+}
+
+.role-selection-page__card h2 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.role-selection-page__card p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   RESPONSIVE
+   ───────────────────────────────────────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+  .role-selection-page {
+    padding: 1.5rem 1rem;
+  }
+
+  .role-selection-page__title {
+    font-size: 2rem;
+  }
+
+  .role-selection-page__subtitle {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .role-selection-page__cards {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .role-selection-page__card {
+    min-width: 100%;
+    padding: 2rem 1.5rem;
+  }
+
+  .role-selection-page__icon {
+    font-size: 3rem;
+  }
+
+  .role-selection-page__card h2 {
+    font-size: 1.25rem;
+  }
+}

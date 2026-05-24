@@ -1,0 +1,99 @@
+/* ─────────────────────────────────────────────────────────────────────────────
+   APP-WIDE STYLES
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.app {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   BACKGROUND BLOBS (decorative)
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.background-blobs {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(40px);
+}
+
+.blob-1 {
+  width: 380px;
+  height: 380px;
+  top: -80px;
+  left: -100px;
+}
+
+.blob-2 {
+  width: 260px;
+  height: 260px;
+  top: 40%;
+  right: -60px;
+}
+
+.blob-3 {
+  width: 320px;
+  height: 320px;
+  bottom: -80px;
+  left: 20%;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   SCREEN CONTAINER
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.screen-container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  min-height: 100vh;
+  animation: fadeIn 0.35s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   RESPONSIVE LAYOUT
+   ───────────────────────────────────────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+  .blob-1 {
+    width: 250px;
+    height: 250px;
+    top: -50px;
+    left: -50px;
+  }
+
+  .blob-2 {
+    width: 200px;
+    height: 200px;
+    right: -30px;
+  }
+
+  .blob-3 {
+    width: 220px;
+    height: 220px;
+    bottom: -40px;
+    left: 10%;
+  }
+}

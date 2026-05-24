@@ -1,0 +1,505 @@
+/* ─────────────────────────────────────────────────────────────────────────────
+   ADMIN DASHBOARD STYLES
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.admin-dashboard {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   HEADER
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.admin-dashboard__header {
+  padding: 2rem 1.5rem;
+  border-bottom: 1px solid;
+}
+
+.admin-dashboard__header h1 {
+  margin: 0 0 0.5rem 0;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.admin-dashboard__header p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   STATS GRID
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.admin-dashboard__stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem 1.5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.admin-dashboard__stat-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  border: 2px solid;
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.admin-dashboard__stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.admin-dashboard__stat-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.admin-dashboard__stat-content {
+  flex: 1;
+}
+
+.admin-dashboard__stat-value {
+  font-size: 1.75rem;
+  font-weight: 800;
+  margin-bottom: 0.25rem;
+}
+
+.admin-dashboard__stat-label {
+  font-size: 0.85rem;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   TABS
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.admin-dashboard__tabs {
+  display: flex;
+  gap: 0;
+  padding: 0 1.5rem;
+  border-bottom: 1px solid;
+}
+
+.admin-dashboard__tab {
+  padding: 1rem 1.5rem;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.admin-dashboard__tab:hover {
+  opacity: 0.8;
+}
+
+.admin-dashboard__tab.active {
+  border-bottom: 2px solid;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   CONTENT
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.admin-dashboard__content {
+  flex: 1;
+  padding: 2rem 1.5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.admin-dashboard__section {
+  padding: 2rem;
+  border: 1px solid;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+}
+
+.admin-dashboard__section h2 {
+  margin: 0 0 1.5rem 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.admin-dashboard__section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.admin-dashboard__section-header h2 {
+  margin: 0;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   STATUS GRID
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.admin-dashboard__status-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.5rem;
+}
+
+.admin-dashboard__status-item {
+  text-align: center;
+  padding: 1rem;
+}
+
+.admin-dashboard__status-label {
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+  opacity: 0.8;
+}
+
+.admin-dashboard__status-value {
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   SPACES LIST
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.admin-dashboard__spaces-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.admin-dashboard__space-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid;
+  border-radius: 0.75rem;
+  transition: all 0.3s ease;
+}
+
+.admin-dashboard__space-item:hover {
+  transform: translateX(4px);
+}
+
+.admin-dashboard__space-rank {
+  font-size: 1.5rem;
+  font-weight: 800;
+  width: 50px;
+  text-align: center;
+}
+
+.admin-dashboard__space-info {
+  flex: 1;
+}
+
+.admin-dashboard__space-capacity {
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   SPACES TABLE
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.admin-dashboard__spaces-table {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border: 1px solid;
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+
+.admin-dashboard__table-header {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1.5fr;
+  gap: 1rem;
+  padding: 1rem;
+  font-weight: 700;
+  border-bottom: 1px solid;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.admin-dashboard__table-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1.5fr;
+  gap: 1rem;
+  padding: 1rem;
+  border-bottom: 1px solid;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.admin-dashboard__table-row:hover {
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.admin-dashboard__table-row:last-child {
+  border-bottom: none;
+}
+
+.admin-dashboard__row-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.admin-dashboard__btn-add,
+.admin-dashboard__btn-small {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  white-space: nowrap;
+}
+
+.admin-dashboard__btn-add {
+  font-size: 0.95rem;
+}
+
+.admin-dashboard__btn-add:hover,
+.admin-dashboard__btn-small:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.admin-dashboard__btn-danger {
+  opacity: 0.7;
+}
+
+.admin-dashboard__btn-danger:hover {
+  opacity: 1;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   BOOKINGS LIST
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.admin-dashboard__bookings-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.admin-dashboard__booking-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem;
+  border: 1px solid;
+  border-radius: 0.75rem;
+  transition: all 0.3s ease;
+}
+
+.admin-dashboard__booking-item:hover {
+  transform: translateX(4px);
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   REVENUE CHART
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.admin-dashboard__revenue-chart {
+  margin-bottom: 2rem;
+  padding: 2rem 0;
+}
+
+.admin-dashboard__chart-bars {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  gap: 1rem;
+  height: 250px;
+  margin-bottom: 1rem;
+}
+
+.admin-dashboard__chart-bar-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  flex: 1;
+  gap: 0.5rem;
+}
+
+.admin-dashboard__chart-bar {
+  width: 100%;
+  border-radius: 0.5rem 0.5rem 0 0;
+  transition: all 0.3s ease;
+  min-height: 20px;
+}
+
+.admin-dashboard__chart-bar:hover {
+  opacity: 0.8;
+}
+
+.admin-dashboard__chart-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   REVENUE SUMMARY
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.admin-dashboard__revenue-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid;
+}
+
+.admin-dashboard__summary-item {
+  padding: 1rem;
+  border-bottom: 1px solid;
+  text-align: center;
+}
+
+.admin-dashboard__summary-item:last-child {
+  border-bottom: none;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   OVERVIEW
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.admin-dashboard__overview {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   RESPONSIVE
+   ───────────────────────────────────────────────────────────────────────────── */
+
+@media (max-width: 1024px) {
+  .admin-dashboard__stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .admin-dashboard__table-header,
+  .admin-dashboard__table-row {
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  }
+
+  .admin-dashboard__row-actions {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-dashboard__header {
+    padding: 1.5rem;
+  }
+
+  .admin-dashboard__header h1 {
+    font-size: 1.5rem;
+  }
+
+  .admin-dashboard__stats-grid {
+    grid-template-columns: 1fr;
+    padding: 1.5rem 1rem;
+  }
+
+  .admin-dashboard__content {
+    padding: 1.5rem 1rem;
+  }
+
+  .admin-dashboard__section {
+    padding: 1.5rem;
+  }
+
+  .admin-dashboard__tabs {
+    overflow-x: auto;
+    padding: 0 1rem;
+  }
+
+  .admin-dashboard__tab {
+    padding: 0.75rem 1rem;
+  }
+
+  .admin-dashboard__table-header,
+  .admin-dashboard__table-row {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .admin-dashboard__table-header::before,
+  .admin-dashboard__table-row::before {
+    display: none;
+  }
+
+  .admin-dashboard__chart-bars {
+    height: 200px;
+  }
+
+  .admin-dashboard__revenue-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-dashboard__section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-dashboard__header h1 {
+    font-size: 1.25rem;
+  }
+
+  .admin-dashboard__stats-grid {
+    gap: 1rem;
+  }
+
+  .admin-dashboard__stat-card {
+    padding: 1rem;
+  }
+
+  .admin-dashboard__stat-icon {
+    font-size: 1.5rem;
+  }
+
+  .admin-dashboard__stat-value {
+    font-size: 1.25rem;
+  }
+
+  .admin-dashboard__status-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .admin-dashboard__chart-bars {
+    height: 150px;
+  }
+
+  .admin-dashboard__btn-add,
+  .admin-dashboard__btn-small {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+  }
+}

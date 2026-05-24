@@ -1,0 +1,241 @@
+/* ─────────────────────────────────────────────────────────────────────────────
+   MY QR CODE PAGE STYLES
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.my-qr-code-page {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   HEADER
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.my-qr-code-page__header {
+  padding: 2rem 1.5rem;
+  border-bottom: 1px solid;
+}
+
+.my-qr-code-page__header h1 {
+  margin: 0 0 0.5rem 0;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.my-qr-code-page__header p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   CONTENT
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.my-qr-code-page__content {
+  flex: 1;
+  padding: 2rem 1.5rem;
+}
+
+.my-qr-code-page__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   QR CODE CARD
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.my-qr-code-page__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem;
+  border: 1px solid;
+  border-radius: 1rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.my-qr-code-page__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.my-qr-code-page__space-info {
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.my-qr-code-page__space-info h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.125rem;
+}
+
+.my-qr-code-page__qr-container {
+  padding: 1rem;
+  background: white;
+  border-radius: 0.75rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.my-qr-code-page__qr-container canvas {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   ACTIONS
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.my-qr-code-page__actions {
+  display: flex;
+  gap: 0.75rem;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.my-qr-code-page__btn-download,
+.my-qr-code-page__btn-share {
+  flex: 1;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  white-space: nowrap;
+}
+
+.my-qr-code-page__btn-download {
+  flex: 1;
+}
+
+.my-qr-code-page__btn-download:hover,
+.my-qr-code-page__btn-share:hover {
+  transform: translateY(-2px);
+}
+
+.my-qr-code-page__btn-download:hover {
+  box-shadow: 0 4px 12px rgba(0, 201, 167, 0.3);
+}
+
+.my-qr-code-page__btn-share {
+  border: 1px solid;
+  background: transparent;
+}
+
+.my-qr-code-page__btn-share:hover {
+  opacity: 0.8;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   STATS
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.my-qr-code-page__stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  width: 100%;
+  padding-top: 1rem;
+  border-top: 1px solid;
+}
+
+.my-qr-code-page__stats > div {
+  padding: 0.75rem;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   INSTRUCTIONS
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.my-qr-code-page__instructions {
+  padding: 2rem;
+  border: 1px solid;
+  border-radius: 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.my-qr-code-page__instructions h2 {
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.my-qr-code-page__instructions ol {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.my-qr-code-page__instructions li {
+  margin-bottom: 0.75rem;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   RESPONSIVE
+   ───────────────────────────────────────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+  .my-qr-code-page__header {
+    padding: 1.5rem;
+  }
+
+  .my-qr-code-page__header h1 {
+    font-size: 1.5rem;
+  }
+
+  .my-qr-code-page__content {
+    padding: 1.5rem 1rem;
+  }
+
+  .my-qr-code-page__grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+
+  .my-qr-code-page__card {
+    padding: 1.25rem;
+  }
+
+  .my-qr-code-page__instructions {
+    padding: 1.5rem;
+  }
+
+  .my-qr-code-page__instructions h2 {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .my-qr-code-page__header h1 {
+    font-size: 1.25rem;
+  }
+
+  .my-qr-code-page__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .my-qr-code-page__actions {
+    flex-direction: column;
+  }
+
+  .my-qr-code-page__btn-download,
+  .my-qr-code-page__btn-share {
+    width: 100%;
+  }
+}

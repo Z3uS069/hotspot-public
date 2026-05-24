@@ -1,0 +1,287 @@
+/* ─────────────────────────────────────────────────────────────────────────────
+   SPACE SETUP PAGE STYLES
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.space-setup-page {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   HEADER
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.space-setup-page__header {
+  padding: 2rem 1.5rem;
+  border-bottom: 1px solid;
+}
+
+.space-setup-page__header h1 {
+  margin: 0 0 0.5rem 0;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.space-setup-page__header p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   CONTENT
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.space-setup-page__content {
+  flex: 1;
+  padding: 2rem 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.space-setup-page__success-message {
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.space-setup-page__form {
+  padding: 2rem;
+  border: 1px solid;
+  border-radius: 1rem;
+}
+
+.space-setup-page__section {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid;
+}
+
+.space-setup-page__section:last-child {
+  border-bottom: none;
+  margin-bottom: 2rem;
+}
+
+.space-setup-page__section h2 {
+  margin: 0 0 1.5rem 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   FORM ELEMENTS
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.space-setup-page__form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.space-setup-page__form-group:last-child {
+  margin-bottom: 0;
+}
+
+.space-setup-page__form-group label {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.space-setup-page__form-group input,
+.space-setup-page__form-group textarea {
+  padding: 0.75rem;
+  border: 1px solid;
+  border-radius: 0.5rem;
+  font-family: inherit;
+  font-size: 0.95rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.space-setup-page__form-group input:focus,
+.space-setup-page__form-group textarea:focus {
+  box-shadow: 0 0 0 3px rgba(0, 201, 167, 0.1);
+}
+
+.space-setup-page__form-group textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.space-setup-page__error {
+  color: #ff4757;
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   FORM ROW
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.space-setup-page__form-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   IMAGE PREVIEW
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.space-setup-page__image-preview {
+  margin-top: 1rem;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  max-height: 300px;
+}
+
+.space-setup-page__image-preview img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   AMENITIES GRID
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.space-setup-page__amenities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 0.75rem;
+}
+
+.space-setup-page__amenity-btn {
+  padding: 0.75rem;
+  border: 1px solid;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.space-setup-page__amenity-btn:hover {
+  transform: translateY(-2px);
+}
+
+.space-setup-page__amenity-btn.active {
+  box-shadow: 0 4px 12px rgba(0, 201, 167, 0.3);
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   FORM ACTIONS
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.space-setup-page__form-actions {
+  display: flex;
+  gap: 1rem;
+  padding-top: 2rem;
+  border-top: 1px solid;
+}
+
+.space-setup-page__btn-submit,
+.space-setup-page__btn-cancel {
+  flex: 1;
+  padding: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.space-setup-page__btn-submit {
+  flex: 1.2;
+}
+
+.space-setup-page__btn-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.space-setup-page__btn-cancel {
+  background: transparent;
+  border: 1px solid;
+}
+
+.space-setup-page__btn-cancel:hover {
+  opacity: 0.8;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   RESPONSIVE
+   ───────────────────────────────────────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+  .space-setup-page__header {
+    padding: 1.5rem;
+  }
+
+  .space-setup-page__header h1 {
+    font-size: 1.5rem;
+  }
+
+  .space-setup-page__content {
+    padding: 1.5rem 1rem;
+  }
+
+  .space-setup-page__form {
+    padding: 1.5rem;
+  }
+
+  .space-setup-page__form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .space-setup-page__amenities-grid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  }
+
+  .space-setup-page__form-actions {
+    flex-direction: column;
+  }
+
+  .space-setup-page__btn-submit,
+  .space-setup-page__btn-cancel {
+    flex: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .space-setup-page__header h1 {
+    font-size: 1.25rem;
+  }
+
+  .space-setup-page__section {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .space-setup-page__form-group {
+    margin-bottom: 1rem;
+  }
+
+  .space-setup-page__amenities-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

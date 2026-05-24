@@ -1,0 +1,234 @@
+/* ─────────────────────────────────────────────────────────────────────────────
+   SPACES PAGE STYLES
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.spaces-page {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   HEADER
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.spaces-page__header {
+  padding: 2rem 1.5rem;
+  border-bottom: 1px solid;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.spaces-page__header h1 {
+  margin: 0 0 0.5rem 0;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.spaces-page__header p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   FILTERS
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.spaces-page__filters {
+  padding: 1.5rem;
+  border-bottom: 1px solid;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.spaces-page__filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.spaces-page__filter-group label {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.spaces-page__filter-group input,
+.spaces-page__filter-group select {
+  padding: 0.75rem;
+  border: 1px solid;
+  border-radius: 0.5rem;
+  font-family: inherit;
+  font-size: 0.95rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.spaces-page__filter-group input:focus,
+.spaces-page__filter-group select:focus {
+  box-shadow: 0 0 0 3px rgba(0, 201, 167, 0.1);
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   TYPE CHIPS
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.spaces-page__type-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.spaces-page__chip {
+  padding: 0.5rem 1rem;
+  border: 1px solid;
+  border-radius: 9999px;
+  background: transparent;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.spaces-page__chip:hover {
+  transform: translateY(-2px);
+}
+
+.spaces-page__chip.active {
+  box-shadow: 0 4px 12px rgba(0, 201, 167, 0.25);
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   PRICE RANGE
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.spaces-page__price-range {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.spaces-page__price-range input[type='range'] {
+  width: 100%;
+  height: 6px;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.spaces-page__price-range input[type='range']::-webkit-slider-thumb {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #00c9a7;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.spaces-page__price-range input[type='range']::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+
+.spaces-page__price-range input[type='range']::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #00c9a7;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.spaces-page__price-range input[type='range']::-moz-range-thumb:hover {
+  transform: scale(1.2);
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   CONTENT
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.spaces-page__content {
+  flex: 1;
+  padding: 2rem 1.5rem;
+}
+
+.spaces-page__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.spaces-page__empty {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.spaces-page__empty p {
+  margin: 0 0 1rem 0;
+  font-size: 1.1rem;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   RESPONSIVE
+   ───────────────────────────────────────────────────────────────────────────── */
+
+@media (max-width: 1024px) {
+  .spaces-page__filters {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .spaces-page__grid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .spaces-page__header {
+    padding: 1.5rem;
+  }
+
+  .spaces-page__header h1 {
+    font-size: 1.5rem;
+  }
+
+  .spaces-page__filters {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .spaces-page__content {
+    padding: 1rem;
+  }
+
+  .spaces-page__grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .spaces-page__header h1 {
+    font-size: 1.25rem;
+  }
+
+  .spaces-page__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .spaces-page__type-chips {
+    flex-direction: column;
+  }
+
+  .spaces-page__chip {
+    width: 100%;
+    text-align: center;
+  }
+}

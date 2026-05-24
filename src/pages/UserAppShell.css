@@ -1,0 +1,121 @@
+/* ─────────────────────────────────────────────────────────────────────────────
+   USER APP SHELL STYLES
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.user-app-shell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   HEADER
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.user-app-shell__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.user-app-shell__header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.user-app-shell__back-btn {
+  margin-right: 1rem;
+  font-size: 1.5rem;
+}
+
+.user-app-shell__header-actions {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.user-app-shell__theme-btn,
+.user-app-shell__profile-btn {
+  font-size: 1.125rem;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   CONTENT
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.user-app-shell__content {
+  flex: 1;
+  width: 100%;
+  overflow-y: auto;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   BOTTOM NAVIGATION
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.user-app-shell__nav {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid;
+  padding: 0.5rem 0;
+  gap: 0;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.user-app-shell__nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-bottom: 2px solid transparent;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.user-app-shell__nav-item.active {
+  font-weight: 700;
+}
+
+.user-app-shell__nav-item:hover {
+  opacity: 0.8;
+}
+
+.user-app-shell__nav-icon {
+  font-size: 1.5rem;
+}
+
+.user-app-shell__nav-label {
+  font-size: 0.75rem;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   RESPONSIVE
+   ───────────────────────────────────────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+  .user-app-shell__header {
+    padding: 1rem;
+  }
+
+  .user-app-shell__header h1 {
+    font-size: 1.25rem;
+  }
+
+  .user-app-shell__nav-label {
+    display: none;
+  }
+
+  .user-app-shell__nav-icon {
+    font-size: 1.5rem;
+  }
+}
